@@ -4,6 +4,7 @@ import NavComponent from "./views/Navbar";
 import HomeComponent from "./views/HomeComponent";
 import Login from "./views/Login";
 import SignUp from "./views/SignUp";
+import Service from "./views/Service";
 import {auth} from "./firebase/firebaseConfig"
 import {onAuthStateChanged} from 'firebase/auth'
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/calendar" element={<Calendar/>} />
+            <Route path="/Service" element={<Service/>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

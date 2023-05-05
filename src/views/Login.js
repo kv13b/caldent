@@ -8,6 +8,7 @@ import { auth, db } from "../firebase/firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Alert from "react-bootstrap/Alert";
+import "../css/Login.css";
 
 import { useNavigate } from "react-router-dom";
 export default function Login() {
@@ -45,13 +46,13 @@ export default function Login() {
     }
   };
   return (
-    <Container fluid="md">
+    <Container fluid="md" className="log-container">
       <Row>
         <Col>
           <h1>Login</h1>
           <p style={{ color: "red" }}>{error != "" ? error : null}</p>
 
-          <Form>
+          <Form className="cover">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
@@ -65,8 +66,8 @@ export default function Login() {
               <Form.Control type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSubmit}>
-              Submit
+            <Button className="login-btn" variant="primary" type="submit" onClick={handleSubmit}>
+              Login
             </Button>
           </Form>
         </Col>

@@ -10,6 +10,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import Alert from "react-bootstrap/Alert";
 import { Link } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
+import "../css/Sign.css"
 
 export default function SignUp() {
   const [name, setName] = useState("");
@@ -72,12 +73,12 @@ export default function SignUp() {
   };
 
   return (
-    <Container fluid="md">
+    <Container fluid="md" className="centerContainer">
       <Row>
         <Col>
           <h1>Sign Up</h1>
           <p style={{ color: "red" }}>{error != "" ? error : null}</p>
-          <Form>
+          <Form className="anim">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Name</Form.Label>
               <Form.Control
@@ -129,7 +130,7 @@ export default function SignUp() {
                 onChange={(e) => setCPassword(e.target.value)}
               />
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={handleSubmit}>
+            <Button className="sign-btn" variant="primary" type="submit" onClick={handleSubmit}>
               Submit
             </Button>
           </Form>
