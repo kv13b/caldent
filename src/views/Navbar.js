@@ -21,7 +21,7 @@ function NavComponent() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home"><Link to="/" style={{textDecoration:"none",color:"white"}}>Home</Link></Nav.Link>
-              <Nav.Link href="#features"><Link to="/calendar" style={{textDecoration:"none",color:"white"}}>My Calendar</Link></Nav.Link>
+             { currentUser && <Nav.Link href="#features"><Link to="/calendar" style={{textDecoration:"none",color:"white"}}>My Calendar</Link></Nav.Link>}
               <Nav.Link href="#services"><Link to="/Service" style={{textDecoration:"none",color:"white"}}>About Us</Link></Nav.Link>
 
               {/* <Nav.Link href="#pricing">About Us</Nav.Link> */}
