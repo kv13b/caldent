@@ -6,7 +6,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap/Modal";
+import Modal from "react-bootstrap/Modal";  //event pop up wala
 import { db } from "../firebase/firebaseConfig";
 import emailjs from "emailjs-com";
 import LoadingBar from "react-top-loading-bar";
@@ -59,7 +59,7 @@ export default function Calendar() {
   };
 
   const getEventData = () => {
-    setProgress(30);
+    setProgress(30);                //to get the events
     if (currentUser) {
       const collectionRef = collection(
         db,
@@ -67,7 +67,7 @@ export default function Calendar() {
         currentUser.uid,
         "userEvents"
       );
-      getDocs(collectionRef)
+      getDocs(collectionRef)          //to get the eventlist from firebase
         .then((querySnapshot) => {
           const eventsArray = [];
           querySnapshot.forEach((doc) => {
@@ -104,14 +104,14 @@ export default function Calendar() {
       allDay: arg.allDay,
     };
     console.log(argData);
-    setEvent({ ...event, ...argData });
+    setEvent({ ...event, ...argData });   //on handle click this event will get selected
   };
-  const handleEventSubmit = async () => {
+  const handleEventSubmit = async () => { //on submit this will be sent to the firebase
     console.log(event);
     addDoc(collection(doc(db, "events", currentUser.uid), "userEvents"), event)
       .then((docRef) => {
         console.log("Event added with ID:", docRef.id);
-        getEventData();
+        getEventData();   
         sendEmail();
       })
       .catch((error) => {
@@ -176,7 +176,7 @@ export default function Calendar() {
                 placeholder="Enter Event Name"
                 autoFocus
                 value={event.eventName}
-                onChange={(e) =>
+                onChange={(e) =>        //set the state 
                   setEvent({ ...event, eventName: e.target.value })
                 }
               />
