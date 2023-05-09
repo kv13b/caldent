@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Source+Code+Pro&display=swap');
 body, html {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
 
 .home-container {
-  background-image: url("../assets/back.jpg");
-  background-size: cover;
-  
-    display: flex;
-    justify-content: center;
+   background-image: url("../assets/mini.jpg");
+   background-size: cover;
+   padding-top: 15%;
     align-items: center;
-    height: 100vh;
+    height: 92.5vh;
   }
   
   .content {
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 40px;
+    padding-top: 2%;
     text-align: center;
-      }
+  }
+
+  .home-container .content h1{
+    font-size: 80px;
+  }
   

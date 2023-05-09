@@ -10,7 +10,7 @@ import Modal from "react-bootstrap/Modal";  //event pop up wala
 import { db } from "../firebase/firebaseConfig";
 import emailjs from "emailjs-com";
 import LoadingBar from "react-top-loading-bar";
-
+import "../css/cal.css"
 import {
   Timestamp,
   addDoc,
@@ -145,7 +145,7 @@ export default function Calendar() {
         onLoaderFinished={() => setProgress(0)}
         height={5}
       />
-      <Row className="mt-3">
+      <Row className="java mt-4">
         <Col>
           <FullCalendar
             ref={calendarRef}
@@ -154,7 +154,7 @@ export default function Calendar() {
             dateClick={handleDateClick}
             eventClick={handleEventClick}
             headerToolbar={{
-              start: "dayGridMonth,timeGridWeek,timeGridDay",
+              start: "dayGridMonth,timeGridWeek,timeGridDay" ,
               center: "title",
               end: "today prev,next",
             }}

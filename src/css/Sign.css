@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
 body, html {
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background-image: url("../assets/mini2.jpg");
+    background-size: cover;
 }
 
 
 .centerContainer{
-    display: flex;
-    width: 100%;
-    max-width: 60%;
-    margin: 0 auto;
+    color: whitesmoke;
+    font-family: 'Righteous', cursive;
+    width: 50%;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-left: 23%;
+}
+
+.centerContainer h1{
+    padding-left: 21%;
+    padding-top: 1%;
 }
 
 .page {
@@ -27,27 +35,42 @@ body, html {
     background-color: #585151;
 }
 
-.anim {
+.centerContainer .anim h1{
     background-color: white;
-    width: 142%;
+    width: 50%;
     height: 100%;
-    position: relative;
     border-radius: 2em;
     box-shadow: 0 0.188em 1.55em rgb(52 44 44);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 10%;
+}
+
+.anim {
+    background-color: #3a5c5d;
+    padding: 13px;
+    width: 50%;
+    border-radius: 42px;
+    margin-left: 15%;
 }
 
 
+
+.centerContainer .anim .mb-3 {
+    margin-left: 9%;
+    width: 345px;
+}
+
 .sign-btn {
-    width: 25%;
+    margin-left: 37%;
+    width: 27%;
     height: 3em;
     background-color: rgb(32, 177, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
+    transition: 1.5s;
     border-radius: 1.25em;
     cursor: pointer;
 }

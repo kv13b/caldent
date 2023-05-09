@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
 body, html {
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background-image: url("../assets/mini2.jpg");
+    background-size: cover;
 }
 
 
@@ -19,18 +22,36 @@ body, html {
 }
 
 
-.cover {
+.log-container{
+    color: whitesmoke;
+    font-family: 'Righteous', cursive;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 23%;
+}
+
+.log-container .cover h1{
     background-color: white;
-    width: 40%;
-    height: 105%;
-    position: relative;
-    border-radius: 3em;
-    box-shadow: 0 0.188em 1.55em rgb(16, 10, 10);
+    width: 50%;
+    height: 100%;
+    border-radius: 2em;
+    box-shadow: 0 0.188em 1.55em rgb(52 44 44);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin-left: 10%;
 }
+
+.cover {
+    background-color: #3a5c5d;
+    padding: 19px;
+    width: 35%;
+    border-radius: 47px;
+    margin-left: 1%;
+}
+
 
 .login-btn {
     width: 20%;
