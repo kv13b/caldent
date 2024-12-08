@@ -13,7 +13,9 @@ Caldent aimed to centralize task management and event tracking,creating a user-f
 3. Initialize a Git repository:  
    ```bash
    git init
-4. git remote add origin https://github.com/kv13b/caldent.git
+4. Clone the repository
+   ```bash
+   git clone https://github.com/kv13b/caldent.git
 5. npm install
 6. after running these you are good to go through the project
 
